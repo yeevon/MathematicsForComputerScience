@@ -1,9 +1,11 @@
-# Mathematics for Computer Science 
+# Mathematics for Computer Science
 
 ## Weekly Progress
 
 This README tracks my notes, assignments, and completed work for the MCS course.
 Each week links directly to the files in the repo.
+
+Online learing resource: [🔗 MIT OpenCourseWare — Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/syllabus/)
 
 ---
 
