@@ -1,0 +1,101 @@
+\documentclass[12pt]{report}
+\usepackage{amssymb}
+\usepackage{utf8add}
+
+\title{\Huge{Mathematics for Computer Science} Recitation 1}
+\author{\huge{Jose Miguel de Lima}}
+\date{11/19/2025}
+
+\begin{document}
+\maketitle
+
+\section{1 Team Problem: A Myster}
+A certain cabal within the 6.042 course staﬀ is plotting to make the ﬁnal exam ridiculously
+hard. (“Problem 1. Prove that the axioms of mathematics are complete and consistent.
+Express your answer in Mayan hieroglyphics.”) The only way to stop their evil plan is to
+determine exactly who is in the cabal. The course staﬀ consists of nine people:
+
+\medskip
+$\{Oscar, Stav, Darren, Patrice, David, Nick, Martyna, Marten, Tom\}$
+\medskip
+
+\noindent
+The cabal is a subset of these nine. A membership roster has been found and appears below,
+but it is deviously encrypted in logic notation. The predicate $incabal$ indicates who is in the
+cabal; that is, $incabal(x)$ is true if and only if x is a member. Translate each statement below
+into English and deduce who is in the cabal.
+
+\bigskip
+
+\noindent(i) $\exists x  \exists y  \exists z  (x \not= y \wedge x \not= z \wedge y \not= z \wedge incabal(x) \wedge incabal(y) \wedge incabal(z))$
+
+\medskip
+\noindent\text{There are at least three people in the cabal}
+
+\bigskip
+\noindent(ii) $\neg(incabal(Stav) \wedge incabal(David))$
+
+\[
+\begin{array}{c | c | c | c}
+    \text{Stav} & \text{David} & \text{Stav} \wedge \text{David} & \neg(\text{Stav} \wedge \text{David}) \\
+T & T & T & F \\
+T & F & F & T \\
+F & T & F & T \\
+F & F & F & T \\
+\end{array}
+\]
+
+\medskip
+\noindent\text{Stav or David or neither are in the cabal}
+
+\bigskip
+\noindent
+(iii) $(incabal(Martyna) \vee incabal(Patrice)) \rightarrow \forall x\, incabal(x)$
+
+\medskip
+\noindent\text{If Martyna or Patrice or both are in Cabal then everyone is in the cabal}
+
+\bigskip\noindent
+(iv) $incabal(Stav) → incabal(David)$
+
+\medskip
+\noindent\text{If Stav is in the cabal then David is also in the cabal}
+
+\bigskip\noindent
+(v) $incabal(Darren) → incabal(Martyna)$
+
+\medskip
+\noindent\text{If Darren is in the cabal then Martyna is also in the cabal}
+
+\bigskip\noindent
+(vi) $(incabal(Oscar) \vee incabal(Nick)) \rightarrow \neg incabal(Tom)$
+
+\medskip
+\noindent\text{If Oscar or Nick or both are in the cabal then Tom is not in the cabal}
+
+\bigskip\noindent
+(vii) $(incabal(Oscar   ) \vee incabal(David)) \rightarrow \neg incabal(Marten)$
+
+\medskip
+\noindent\text{If Oscar or David or both are in the cabal then Marten is not in the cabal}
+
+\bigskip
+\text{Solution:} From (i) we know that there are at least three people in the cabal. From (ii) we know that
+Stav and David cannot both be in the cabal. From (iii) we know if either Martyna or Patrice are in the cabal then 
+everyone is in the cabal which is impossible since from (ii) we know that Stav and David cannot both be in the cabal. 
+Therefore, Martyna and Patrice are not in the cabal. From (iv) we know if Stav is in the cabal then David is also in 
+the cabal which is impossible for Stav to be in the cabal.
+
+At this point we have eliminated three people from being in the cabal: \{Martyna, Patrice and Stav.\}
+
+From (v) we know if Darren is in the cabal then Martyna is also in the cabal which is impossible since Martyna is not
+in the cabal. Therefore, Darren is not in the cabal.
+
+Current potential members of the cabal are: \{Oscar, David, Nick, Marten, Tom.\}
+
+From (vi) we know if Oscar or Nick or both are in the cabal then Tom is not in the cabal. From (vii) we know if 
+Oscar or David or both are in the cabal then Marten is not in the cabal. Since we need at least three people in 
+the cabal from (i) the only way to satisfy both (vi) and (vii) is by having Oscar, David and Nick in the cabal.
+
+Final members of the cabal are: \{Oscar, David, Nick.\}
+\end{document}

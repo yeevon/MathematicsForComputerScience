@@ -17,6 +17,8 @@ Status: ✅ Completed
 
 - 📝 Notes (LaTeX): [week1.tex](Notes/Week1/week1.tex)
 
-- ✔️ Assignment: Pending
+- ... Recitations: [Recitations 1 problem set](Recitations/ProblemsForRecitation1.pdf) | [My Solution](Recitations/rec1.pdf)
+
+- ✔️ Assignment: None
 
 - 🧪 Quiz/Test: None
