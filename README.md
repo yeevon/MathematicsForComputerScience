@@ -1,0 +1,20 @@
+# Mathematics for Computer Science 
+
+## Weekly Progress
+
+This README tracks my notes, assignments, and completed work for the MCS course.
+Each week links directly to the files in the repo.
+
+---
+
+### Week 1 — Logic & Propositions
+
+Status: ✅ Completed
+
+- 📄 Notes (PDF): [week1.pdf](Notes/Week1/week1.pdf)
+
+- 📝 Notes (LaTeX): [week1.tex](Notes/Week1/week1.tex)
+
+- ✔️ Assignment: Pending
+
+- 🧪 Quiz/Test: None
