@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1763596190.05334 "/home/papa-jochy/Documents/School/MathematicsForComputerScience/Recitations/rec1.tex" "rec1.pdf" "rec1" 1763596190.27735 0
+["pdflatex"] 1763596582.0307 "/home/papa-jochy/Documents/School/MathematicsForComputerScience/Recitations/rec1.tex" "rec1.pdf" "rec1" 1763596582.25245 0
   "/etc/texmf/web2c/texmf.cnf" 1763572693.24206 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/papa-jochy/Documents/School/MathematicsForComputerScience/Recitations/rec1.tex" 1763596189.89495 3807 998d6d6bd9e961ae51fa08c7c8ee57eb ""
+  "/home/papa-jochy/Documents/School/MathematicsForComputerScience/Recitations/rec1.tex" 1763596581.87974 3813 fd1bc7f925d92b52b54304f4c05afdc1 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -55,8 +55,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1763573438.43726 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763573459 8213579 18fe27f592a88ea3fb9219ee11e757c1 ""
-  "rec1.aux" 1763596190.25569 146 35c7f86f73e62e3c518dec710dddb06d "pdflatex"
-  "rec1.tex" 1763596189.89495 3807 998d6d6bd9e961ae51fa08c7c8ee57eb ""
+  "rec1.aux" 1763596582.23174 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "rec1.tex" 1763596581.87974 3813 fd1bc7f925d92b52b54304f4c05afdc1 ""
   (generated)
   "rec1.aux"
   "rec1.log"
