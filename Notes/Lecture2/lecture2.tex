@@ -1,0 +1,170 @@
+\documentclass[12pt]{report}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{\Huge{Mathematics for Computer Science} \\ Lecture 2 Notes}
+\author{\huge{Jose Miguel de Lima}}
+\date{12/1/2025}
+
+\begin{document}
+\maketitle
+
+\section*{Lecture Notes}
+
+\section*{Logical Deductions}
+
+An inference rule is a rule for combining true propositions to form other true propositions.
+
+\subsection*{Examples}
+\begin{itemize}
+    \item Modus Ponens: If $(P$ and $(P \rightarrow Q))$, then $Q$.
+    \item $((P \rightarrow Q) \wedge \neg Q) \rightarrow \neg P$
+    \item $(\neg P \rightarrow \text{False}) \rightarrow P$
+\end{itemize}
+
+\noindent \textbf{Avoid proof by intimidation:} ``This is obvious,'' ``obviously,'' ``This is simple.''
+
+\section*{Proof Outlines}
+
+\subsection*{Example}
+\begin{itemize}
+    \item Thm: $\exists n \in \mathbb{N}.\ (n \ge 10 \wedge isprime(n))$
+    \item PF: We'll show that $n = \text{``"}$ works. This $n \in \mathbb{N}$ for [reasons], and $n$ is prime and $\ge 10$ because [reasons].
+\end{itemize}
+
+\subsection*{Abstract Version}
+Thm: $\exists x \in \mathbb{S}.\ P(x)$
+
+\noindent PF: Choose $x = \text{``"}$. Then $x \in \mathbb{S}$ because [reasons], and $P(x)$ is true because [reasons].
+
+\bigskip
+\subsection*{Example}
+\textbf{Thm:} $\forall x \in \mathbb{R}.\ x^2 - 6x > -10$
+
+\noindent \textbf{PF:} Suppose $x \in \mathbb{R}$. Then $(x-3)^2 \ge 0$ because all reals have non-negative squares.  
+Equivalently, $x^2 - 6x \ge -9 > -10$ as needed. QED.
+
+\bigskip
+\textbf{Thm:} $\forall x \in \mathbb{S}.\ P(x)$
+
+\noindent \textbf{PF:} Suppose $x$ is a generic element of $\mathbb{S}$. Then $P(x)$ is true because `` ''.
+
+\bigskip
+\textbf{Thm:} $P \implies Q$
+
+\noindent \textbf{PF:} Assume $P$. Then $Q$ is true because [reasons].  
+\textit{(Direct Proof)}
+
+\bigskip
+\textbf{Thm:} If $n$ is a multiple of 10, then it is even.
+
+\noindent \textbf{PF:} Assume $n$ is a multiple of 10. Then $n = 10k$ for some $k \in \mathbb{Z}$.  
+Thus $n = 2(5k)$, so $n$ is even.
+
+\section*{Proof by Contrapositive}
+
+$P \implies Q$ is equivalent to $\neg Q \implies \neg P$.
+
+\noindent \textbf{PF:} By contrapositive, assume $Q$ is false. Then $P$ is false because [reasons].
+
+\bigskip
+\textbf{Thm:} $\forall n \in \mathbb{Z}.\ iseven(n^2) \implies iseven(n)$
+
+\noindent \textbf{PF:} Suppose $n \in \mathbb{Z}$. Proof by contrapositive: assume $n$ is odd.  
+So $n = 2k + 1$ for some $k \in \mathbb{Z}$.  
+\[
+n^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
+\]
+which is odd. QED.
+
+\section*{Proof by Contradiction}
+
+\textbf{Thm:} $P$.
+
+\noindent \textbf{PF:} For the sake of contradiction, assume $P$ is false.  
+Then $R$ is both true and false, which is a contradiction.  
+So our assumption is wrong, and $P$ is true.
+
+\bigskip
+\textbf{Thm:} $\sqrt{2} \notin \mathbb{Q}$
+
+\noindent \textbf{PF:} Proof by contradiction. Assume $\sqrt{2} \in \mathbb{Q}$.  
+Then $\sqrt{2} = a/b$ for some integers $a,b$ with $b \ne 0$, in lowest terms.
+
+\begin{itemize}
+    \item $a = \sqrt{2} \cdot b$
+    \item $a^2 = 2b^2$
+    \item $a^2$ is even
+    \item $a$ is even by previous theorem, so $a = 2c$ for some $c \in \mathbb{Z}$
+\end{itemize}
+
+\bigskip
+\textbf{Thm:} An integer $n$ is fooish precisely when $n+1$ is barsome.  
+$\forall n \in \mathbb{Z}.\ F(n) \iff B(n+1)$
+
+\noindent \textbf{PF:} Suppose $n$ is an integer. WTS $(F(n) \iff B(n+1))$.
+
+\begin{itemize}
+    \item WTS $F(n) \implies B(n+1)$:  
+    Assume $F(n)$ is true. WTS $B(n+1)$.
+
+    \item WTS $B(n+1) \implies F(n)$:  
+    Assume $B(n+1)$ is true. WTS $F(n)$.
+\end{itemize}
+
+\section*{Proof by Induction}
+
+\textbf{Thm:} $\forall n \in \mathbb{N},\ 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$
+
+\subsection*{Examples}
+\begin{itemize}
+    \item $n = 4$: $1+2+3+4 = \frac{4\cdot 5}{2}$
+    \item $n = 1$: $1 = \frac{1 \cdot 2}{2}$
+    \item $n = 0$: $0 = \frac{0 \cdot 1}{2}$
+\end{itemize}
+
+If $1 + 2 + \dots + n = \frac{n(n+1)}{2}$, then:
+\[
+1 + 2 + \dots + n + (n+1) = \frac{(n+1)(n+2)}{2},
+\]
+because we just added $n+1$ to both sides.
+
+\bigbreak\noindent
+$P(n) := ``1+2+...+n = \frac{n(n+1)}{2}$''
+
+\noindent
+THM: $\forall n \in 0$. $P(n)$
+
+\bigbreak\noindent
+\begin{tabular}{c|c}
+    \textbf{We Proved} & \textbf{We Want} \\ \hline
+    P(0)               & P(0)             \\
+    P(0) $\rightarrow$ P(1) & P(1)        \\
+    P(1) $\rightarrow$ P(2) & P(2)        \\
+    P(2) $\rightarrow$ P(3) & P(3)        \\
+    P(3) $\rightarrow$ P(4) & P(4)        \\
+\end{tabular}
+
+\subsection*{Principle of Induction}
+$LHS \implies RHS$, 
+
+(If you know P(0) $\forall n \geq 0$. $P(n) \implies P(n+1)$) $\implies$ $(\forall n \geq 0$. $P(n)$)
+
+\subsection*{Proof by Induction}
+P(n):= ``$\sum_{k+1}^{n} = \frac{n(n+1)}{2}$'', we'll show $\forall n \geq 0$ P(n), by induction.
+
+\smallbreak\noindent
+Base Case, WTS P(0): $0 = \frac{0*1}{2}$ -- True.
+
+\smallbreak\noindent
+Inductive Step: Assume $n \geq 0$ and assume P(n); WTS P(n+1).
+
+\smallbreak\noindent
+In other words, assume $1+2+...+n = \frac{n(n+1)}{2}$
+
+WTS:
+\[
+1 + 2 + \dots + n + (n+1) = \frac{(n+1)(n+2)}{2},
+\]
+
+\end{document}

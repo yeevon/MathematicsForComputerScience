@@ -1,0 +1,164 @@
+\documentclass[12pt]{report}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{\Huge{Mathematics for Computer Science} Lecture 1 Notes}
+\author{\huge{Jose Miguel de Lima}}
+\date{11/25/2025}
+
+\begin{document}
+\maketitle
+
+\section*{Lecture Notes:}
+
+What is a Proof? : 
+
+-- Its a method of ascertaining truth.
+
+---------------------------------------------------
+
+Examples: 
+
+            - Experiments
+
+            - Sampling 
+
+            - Legal proccedings
+            
+            - Investigations
+            
+            - Questions
+            
+            - Authority
+            
+            - Religion
+            
+            - Inner Conviction
+            
+--------------------------------------
+
+Def: A mathematical proof is a verification of a proposition by a chain of logical deductions from a base set of axioms.            
+
+\medskip
+Def: A proposition is a statement that is true or false.
+
+---------------------
+
+Examples: 
+
+        - 2 + 3 = 5
+        
+        - 2 + 3 = 4
+
+        - $\forall n \in \mathbb{N}: $ $n^2 + n + 41$ is a prime.
+
+        - $P$ is prime (not a propostion) this is a predicate
+
+----------------------------
+
+Def: A predicate is a propostion whose truth depends on variables
+
+---------------------------------
+
+Goldbach's Conjecture: Every even number > 2 is the sum of 2 primes.
+
+Example: 
+        - 12 = 7 + 5
+
+----------------------------------------
+
+Def: Conjecture not sure if it true or not
+
+---------------------------------
+
+A, B are propositions
+
+not A  : $\neg A$ : means a is false
+
+A and B : $A \land B$
+
+A or B : $A \lor B$
+
+exclusive Or, XOR : $A \oplus B: $ One or the Other, not neither or both
+
+Not And, NAND: $ A \barwedge B $ : $ \neg (A \land B): $ One or the Other or Neither not both
+
+-------------------------------------
+
+Implication: A implies B  or  A $\rightarrow$ B: ``A implies B'' aka ``if A then B''
+
+
+$A \implies B$ 
+
+ - counterpositive $\neg B \implies \neg A$
+ 
+ - converse $B \implies A$
+
+ - inverse $\neg A \implies \neg B$
+
+ the converse and inverse are counterpositive of each other.
+
+-------------------------------------------------
+
+Def: A set is a collection of objects. Order doesn't matter and no repeats.
+
+Example:
+
+        - ${6, 1, 2, 0} ::= \{2. 1. 6. 0\} ::= \{6, 1, 2, 0, 0\}$
+
+        - $\mathbb{N}  ::= \{0, 1, 2, 3, ...\}$
+
+        - $\mathbb{Z} ::= \{0, 1, 2, 3, -1, -2, -3, ...\}$
+
+        - $\mathbb{Q} ::= rations$
+
+        - $\mathbb{R} ::= reals$
+
+        - $\mathbb{\not C} ::= complex$
+
+        - Empty Set $\not 0, $ \{\}
+
+        - $\mathbb{B} ::= \{2, {3, 4}, \not 0\}$
+
+------------------------
+
+$x \in A$ means $x$ is an element of $A$
+
+$A \subset B$ ``A is a subset or equal to B''
+
+$A \cup B$ : ``union''
+
+$A \cap B$ : ``intersection''
+
+$A - B$ : ``set difference''
+
+----------------------------------------
+
+Set Builder Notation: 
+
+    ${n \in \mathbb{N} \mid isprime(n)} = \{2, 3, 5, 7, 11, ...\}$
+
+\bigskip
+Tuples: ordered list of elements, and repeats are ok, uses () instead \{\}
+
+$(6,1, 2, 0) \not = (6, 1, 2, 0, 0) \not = (2, 1, 6, 0)$
+
+----------------------------------------
+
+Def: an Axiom is a proposition we assume is true.
+
+Examples:
+
+        - Euclid's Parallel Postulate: For every point p and line l with $p \not\in l$, $\exists$ a unique line $l'$ through $p$ parallel to $l$
+
+--------------------------
+
+A set of Axioms is consistent when you can't prove that False is True.
+
+... is complete when every true proposition can be proved from the axioms.
+
+The Godel incompletness therom: Can't have both. There are true statements that cannot be proved.
+
+
+
+\end{document}
